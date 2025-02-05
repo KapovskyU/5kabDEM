@@ -1,5 +1,6 @@
 #!/bin/bash
+DB_NAME="USER_DB"
 DB_USER="test"
 DB_PASS="password"
 
-mysql -u $DB_USER -p$DB_PASS -D "UPDATE USER_DB SET password = AES_ENCRYPT(password, '1a2B3C4d');"
+mysql -u $DB_USER -p$DB_PASS -D $DB_NAME -e "UPDATE USERS SET password = AES_ENCRYPT(password, '1a2B3C4d');"
