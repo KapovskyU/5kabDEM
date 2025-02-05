@@ -2,4 +2,4 @@
 DB_USER="test"
 DB_PASS="password"
 
-mysql -u $DB_USER -p$DB_PASS -D "SELECT username, AES_DECRYPT(password, 'your_secret_key') AS password FROM Users;"
+mysql -u $DB_USER -p$DB_PASS -D "SELECT NAME, AES_DECRYPT(password, 'your_secret_key') AS PASSWORD FROM USERS;"
