@@ -1,5 +1,5 @@
 #!/bin/bash
-DB_USER="your_username"
-DB_PASS="your_password"
+DB_USER="test"
+DB_PASS="password"
 
 mysql -u $DB_USER -p$DB_PASS -D "SELECT username, AES_DECRYPT(password, 'your_secret_key') AS password FROM Users;"
